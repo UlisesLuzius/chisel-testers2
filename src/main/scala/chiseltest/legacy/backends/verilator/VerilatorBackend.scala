@@ -250,4 +250,7 @@ class VerilatorBackend[T <: MultiIOModule](
       simApiInterface.finish() // Do this to close down the communication
     }
   }
+  override def finish(): Unit = {
+    simApiInterface.finish()
+  }
 }

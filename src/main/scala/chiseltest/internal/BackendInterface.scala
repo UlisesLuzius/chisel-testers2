@@ -109,6 +109,10 @@ trait BackendInterface {
   def getVar(key: Any): Option[Any] = {
     testMap.get(key)
   }
+
+   /** Closes backend simulation
+    */
+  def finish(): Unit = {}
 }
 
 /** Backend associated with a particular circuit, and can run tests
