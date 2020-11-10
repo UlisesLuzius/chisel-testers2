@@ -110,9 +110,16 @@ trait BackendInterface {
     testMap.get(key)
   }
 
-   /** Closes backend simulation
-    */
+
+  /** My modifications **/
+
+  /** Closes backend simulation
+   */
   def finish(): Unit = {}
+
+  /** Gets current clock cycle
+   */ 
+  def getClockCycle(): Int = 0
 }
 
 /** Backend associated with a particular circuit, and can run tests

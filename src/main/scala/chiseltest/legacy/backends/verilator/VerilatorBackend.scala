@@ -250,7 +250,14 @@ class VerilatorBackend[T <: MultiIOModule](
       simApiInterface.finish() // Do this to close down the communication
     }
   }
+
+  /** My modifications **/
+
   override def finish(): Unit = {
     simApiInterface.finish()
+  }
+
+  override def getClockCycle: Int = {
+    currentTimestep
   }
 }
